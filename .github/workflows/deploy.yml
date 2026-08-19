@@ -1,0 +1,48 @@
+name: terraform infra and deploy
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code #--> goes to root directory
+              uses: actions/checkout@v6
+            - name: Azure Login
+              uses: azure/login@v1
+              with:
+                cred: ${{secrets.AZURE_SECRET}}
+
+         #-------------------------------------------
+            - name: terraform setup
+              uses: hashicorp/setup-terraform@v3
+            - name: terraform init
+              working-directory: terraform
+              run: terraform init
+            - name: terraform apply
+              working-directory: terraform
+              run: terraform apply -auto-approve
+          #------------------------------------------  
+            - name: install dotnet
+              uses: actions/setup-dotnet@v6
+              with:
+                dotnet-version: '10.0.x'
+            - name: restore dependencies
+              run: dotnet restore
+            - name: build and publish application
+              run: dotnet publish HDFC_GHA.csproj -c Release -o publish # generates a .dll file
+        #----------------------------------------------
+            - name: publish in webapp 
+              uses: azure/webapps-deploy@v2
+              with:
+                app-name: hdfc-web-app2002
+                package: publish
+
+
+
+
+            
+        
