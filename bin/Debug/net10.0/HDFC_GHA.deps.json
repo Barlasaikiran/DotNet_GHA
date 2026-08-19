@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "HDFC_GHA/1.0.0": {
+        "runtime": {
+          "HDFC_GHA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HDFC_GHA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
