@@ -37,11 +37,11 @@ jobs:
             - name: show repo structure
               run: ls -R
         #----------------------------------------------
-            # - name: publish in webapp 
-            #   uses: azure/webapps-deploy@v2
-            #   with:
-            #     app-name: hdfc-web-app2002
-            #     package: publish
+            - name: publish in webapp 
+              uses: azure/webapps-deploy@v2
+              with:
+                app-name: hdfc-web-app2002
+                package: publish
 
 
 
