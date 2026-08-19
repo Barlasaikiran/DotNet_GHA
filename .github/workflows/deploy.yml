@@ -14,7 +14,7 @@ jobs:
             - name: Azure Login
               uses: azure/login@v1
               with:
-                cred: ${{secrets.AZURE_SECRET}}
+                creds: ${{secrets.AZURE_SECRET}}
 
          #-------------------------------------------
             - name: terraform setup
