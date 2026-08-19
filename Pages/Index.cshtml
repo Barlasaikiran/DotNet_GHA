@@ -1,10 +1,110 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "HDFC Bank - Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HDFC Bank - Home</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>HDFC Bank</h1>
+        <p>Welcome to HDFC Bank</p>
+
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">Accounts</a> |
+            <a href="#">Cards</a> |
+            <a href="#">Loans</a> |
+            <a href="#">Investments</a> |
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <hr />
+    </header>
+
+    <main>
+
+        <h2>Welcome to HDFC Bank</h2>
+
+        <p>
+            Banking made simple, secure and convenient.
+        </p>
+
+        <h3>NetBanking</h3>
+
+        <form>
+            <label for="customerId">Customer ID:</label><br />
+            <input type="text" id="customerId" name="customerId" /><br /><br />
+
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" name="password" /><br /><br />
+
+            <button type="submit">Login</button>
+        </form>
+
+        <hr />
+
+        <h2>Our Banking Services</h2>
+
+        <h3>Accounts</h3>
+        <p>
+            Open and manage your savings and current accounts with ease.
+        </p>
+
+        <h3>Credit Cards</h3>
+        <p>
+            Explore credit cards with rewards, cashback and other benefits.
+        </p>
+
+        <h3>Loans</h3>
+        <p>
+            Choose from personal, home, car and other loan options.
+        </p>
+
+        <h3>Investments</h3>
+        <p>
+            Explore investment and wealth management solutions.
+        </p>
+
+        <hr />
+
+        <h2>Quick Banking</h2>
+
+        <ul>
+            <li><a href="#">Check Account Balance</a></li>
+            <li><a href="#">View Transactions</a></li>
+            <li><a href="#">Transfer Money</a></li>
+            <li><a href="#">Pay Bills</a></li>
+            <li><a href="#">Manage Credit Cards</a></li>
+        </ul>
+
+        <hr />
+
+        <h2>Need Help?</h2>
+
+        <p>
+            Our customer support team is available to assist you with your
+            banking needs.
+        </p>
+
+        <p>
+            Customer Care: 1800-XXX-XXXX
+        </p>
+
+    </main>
+
+    <footer>
+        <hr />
+        <p>&copy; 2026 HDFC Bank Clone. This is a demonstration application.</p>
+    </footer>
+
+</body>
+</html>
